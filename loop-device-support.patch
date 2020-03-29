@@ -1,0 +1,12 @@
+diff --unified --recursive --text package.orig/src/modules/partition/core/DeviceList.cpp package.new/src/modules/partition/core/DeviceList.cpp
+--- package.orig/src/modules/partition/core/DeviceList.cpp	2020-03-29 12:03:28.501554295 +0300
++++ package.new/src/modules/partition/core/DeviceList.cpp	2020-03-29 12:04:16.105229733 +0300
+@@ -109,7 +109,7 @@
+ 
+     CoreBackend* backend = CoreBackendManager::self()->backend();
+ #ifdef WITH_KPMCORE331API
+-    DeviceList devices = backend->scanDevices( /* not includeReadOnly, not includeLoopback */ ScanFlag(0) );
++    DeviceList devices = backend->scanDevices( /* not includeReadOnly, not includeLoopback */ ScanFlag(2) );
+ #else
+     DeviceList devices = backend->scanDevices( /* excludeReadOnly */ true );
+ #endif
